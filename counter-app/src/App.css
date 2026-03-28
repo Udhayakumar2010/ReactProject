@@ -1,0 +1,225 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: #0f0f11;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.counter-wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.app-subtitle {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  font-family: 'DM Mono', monospace;
+}
+
+/* Count Display */
+.count-display {
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 1.75rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.count-display.positive {
+  border-color: #1a4a2e;
+  box-shadow: 0 0 40px rgba(52, 211, 105, 0.07);
+}
+
+.count-display.negative {
+  border-color: #4a1a1a;
+  box-shadow: 0 0 40px rgba(211, 52, 52, 0.07);
+}
+
+.count-display.zero {
+  border-color: #222;
+}
+
+.count-label {
+  display: block;
+  font-size: 0.75rem;
+  font-family: 'DM Mono', monospace;
+  color: #555;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.count-value {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: 'DM Mono', monospace;
+  line-height: 1;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.positive .count-value { color: #34d369; }
+.negative .count-value { color: #d34444; }
+.zero .count-value { color: #fff; }
+
+.count-range {
+  display: block;
+  font-size: 0.75rem;
+  color: #444;
+  font-family: 'DM Mono', monospace;
+}
+
+/* Step Section */
+.step-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-label {
+  font-size: 0.8rem;
+  color: #555;
+  font-family: 'DM Mono', monospace;
+}
+
+.step-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.step-btn {
+  width: 40px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  background: transparent;
+  color: #666;
+  font-size: 0.85rem;
+  font-family: 'DM Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.step-btn:hover {
+  border-color: #444;
+  color: #fff;
+}
+
+.step-btn.active {
+  border-color: #fff;
+  color: #fff;
+  background: #1a1a1a;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #222;
+  font-family: 'DM Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.btn-decrement {
+  background: #1a0f0f;
+  color: #d34444;
+  border-color: #2a1515;
+  flex: 1;
+}
+.btn-decrement:hover:not(:disabled) {
+  background: #2a1515;
+  border-color: #d34444;
+}
+
+.btn-reset {
+  background: #111;
+  color: #666;
+  border-color: #222;
+  padding: 0.85rem 1rem;
+}
+.btn-reset:hover {
+  color: #fff;
+  border-color: #444;
+}
+
+.btn-increment {
+  background: #0f1a12;
+  color: #34d369;
+  border-color: #152a1a;
+  flex: 1;
+}
+.btn-increment:hover:not(:disabled) {
+  background: #152a1a;
+  border-color: #34d369;
+}
+
+/* Concepts Box */
+.concepts-box {
+  border: 1px solid #1a1a1a;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  background: #0a0a0c;
+}
+
+.concepts-title {
+  font-size: 0.78rem;
+  color: #555;
+  font-family: 'DM Mono', monospace;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.concepts-box ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.concepts-box ul li {
+  font-size: 0.85rem;
+  color: #888;
+  font-family: 'DM Mono', monospace;
+}
